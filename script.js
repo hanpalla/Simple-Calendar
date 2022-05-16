@@ -21,11 +21,17 @@ function createCalendar(){
     let date = now.getDate();
     let textDiv;
     let blankTextDiv = document.createTextNode(" ");
+    let totalBox;
+
+    if(firstDayNumber >= 5 && daysInMonth >= 30)
+        totalBox = 41;
+    else
+        totalBox = 34;
     
-    for(let i = 0; i <= 34; i++){
+    for(let i = 0; i <= totalBox; i++){
         const createDiv = document.createElement("div");
         createDiv.className = "column";
-        if(i > firstDayNumber - 1 && i < daysInMonth + 1){
+        if(i > firstDayNumber - 1 && i < daysInMonth + firstDayNumber){
             textDiv = document.createTextNode(daysInMonthCounter);
             createDiv.appendChild(textDiv);
             dateColumn.appendChild(createDiv);
