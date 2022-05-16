@@ -27,7 +27,7 @@ function createCalendar(){
         totalBox = 41;
     else if(firstDayNumber == 5 && daysInMonth == 31)
         totalBox = 41;
-    else if(firstDayNumber == 1 && daysInMonth == 28)
+    else if(firstDayNumber == 0 && daysInMonth == 28)
         totalBox = 27;
     else
         totalBox = 34;
