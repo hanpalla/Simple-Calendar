@@ -23,7 +23,9 @@ function createCalendar(){
     let blankTextDiv = document.createTextNode(" ");
     let totalBox;
 
-    if(firstDayNumber >= 5 && daysInMonth >= 30)
+    if(firstDayNumber == 6 && daysInMonth >= 30)
+        totalBox = 41;
+    else if(firstDayNumber == 5 && daysInMonth == 31)
         totalBox = 41;
     else
         totalBox = 34;
